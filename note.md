@@ -36,3 +36,36 @@ threepop -i treemix_f3_input.gz -k 100
 #Selden;Conness,Army 0.177819 0.000817377 217.548
 ```
 6. note that the estimate 0.0633775 is the estimate from 1236332 variant sites (number of site in vcf file), so it should be converted to the whole genome size which is 147351587 bps. It should be 0.0633775\*1236322/147351587=0.0005317
+
+### 2021.Nov.15
+1. With both the observed and simulated data available, I use R package call [abc](https://cran.r-project.org/web/packages/abc/index.html) to run ABC.
+2. The R script is [here](https://github.com/yimingweng/N_ingens_ABC/blob/master/scripts/ingensabc.r)
+3. The resutls suggest the admixture model, with parameters being astimated as follow:
+  
+T1 generation  
+Min.:                  464282.7  
+Weighted 2.5 % Perc.:  493831.8  
+Weighted Median:       596005.1  
+Weighted Mean:         596553.0  
+Weighted Mode:         576124.0  
+Weighted 97.5 % Perc.: 699333.8  
+Max.:                  745889.5  
+  
+T2 generation  
+Min.:                  349988.4  
+Weighted 2.5 % Perc.:  376080.1  
+Weighted Median:       401074.7  
+Weighted Mean:         401125.2  
+Weighted Mode:         401401.8  
+Weighted 97.5 % Perc.: 426477.8  
+Max.:                  453032.5  
+  
+Contribution from Conness to admixed Selden at T2  
+(not very consistent from different runs)  
+Min.:                  0.3361  
+Weighted 2.5 % Perc.:  0.4727  
+Weighted Median:       0.5980  
+Weighted Mean:         0.5952  
+Weighted Mode:         0.5981
+Weighted 97.5 % Perc.: 0.7021  
+Max.:                  0.7882  
